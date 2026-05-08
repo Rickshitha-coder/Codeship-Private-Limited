@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>BIO DATA</title>
+
+<style>
+body {
+    background-color: #f2f2f2;
+    text-align: center;
+   }
+
+form {
+    background: white;
+    padding: 20px;
+    width: 300px;
+    margin: auto;
+    border-radius: 10px;
+    box-shadow: 0 0 10px gray;
+}
+
+input {
+    width: 90%;
+    padding: 8px;
+    margin-top: 5px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: blue;
+    color: white;
+    border:1;
+    border-radius: 5px;
+   
+}
+
+
+
+table {
+    margin: auto;
+    border-collapse: collapse;
+    width: 80%;
+    background: white;
+}
+
+th, td {
+    padding: 10px;
+    border: 1px solid black;
+	
+}
+
+th {
+    background-color: green;
+    color: white;
+}
+</style>
+
+</head>
+<body>
+
+<h1 style="color : purple;">BIO DATA</h1>
+
+<form id="Form" onsubmit="add(); return false;">
+Name <input type="text" id="name" placeholder="Enter your name" required><br><br>
+Age <input type="number" id="age" placeholder="Enter your age" required><br><br>
+Dob <input type="date" id="dob" required><br><br>
+Location <input type="text" id="location" placeholder="Enter your location" required><br><br>
+Contact <input type="tel" id="contact" placeholder="Enter your contact" required><br><br>
+
+<button type="submit">Submit</button>
+</form>
+
+<br>
+<h2 style="color: Blue;">Submitted Data</h2>
+<table border="1" id="table">
+<tr>
+<th>Name</th>
+<th>Age</th>
+<th>DOB</th>
+<th>Location</th>
+<th>Contact</th>
+</tr>
+</table>
+
+<script>
+function add() {
+    var name = document.getElementById("name").value;
+    var age = document.getElementById("age").value;
+    var dob = document.getElementById("dob").value;
+    var location = document.getElementById("location").value;
+    var contact = document.getElementById("contact").value;
+
+    var table = document.getElementById("table");
+    var row = table.insertRow();
+
+    row.insertCell(0).innerHTML = name;
+    row.insertCell(1).innerHTML = age;
+    row.insertCell(2).innerHTML = dob;
+    row.insertCell(3).innerHTML = location;
+    row.insertCell(4).innerHTML = contact;
+
+    document.getElementById("Form").reset();
+}
+</script>
+
+</body>
+</html>
