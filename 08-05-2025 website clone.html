@@ -1,0 +1,905 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tamil Matrimony Hero</title>
+    <style>
+       
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.hero-section {
+  
+    height: 90vh;
+    width: 100%;
+    background-image:
+                url('https://t4.ftcdn.net/jpg/02/80/68/99/360_F_280689938_daWSuvpHYcgGfGCKVc9jOYoezjxgPLCs.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+}
+
+
+.navbar {
+    width: 100%;
+   
+    padding: 10px 20px;
+    display: flex;
+    background-color: white;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.nav-links a {
+    color:black;
+    text-decoration: none;
+    margin-left: 20px;
+    font-size: 14px;
+}
+.nav-links a:hover{
+    text-decoration:overline;
+    text-decoration-color: rgb(248, 183, 3);
+    
+    text-decoration-thickness: 2px;
+    
+}
+
+
+.hero-content {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.hero-content h1 {
+    font-size: 30px;
+    margin-bottom: 20px;
+    font-weight: 600;
+    max-width: 800px;
+}
+
+
+.btn-group {
+    display: flex;
+    gap: 15px;
+}
+
+.btn {
+    padding: 12px 25px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 1rem;
+    transition: 0.3s;
+}
+
+.btn-register {
+    background-color: #c2185b;
+    color: white;
+}
+
+.btn-login {
+    background-color: #e3f2fd; 
+}
+
+.btn:hover {
+    opacity: 0.9;
+    transform: translateY(-2px);
+}
+
+.banner-container {
+    padding:20px 50px;
+    background-color: #fff;
+}
+
+.elite-card {
+    background-color: #050a30; 
+    border-radius: 20px;
+    padding: 40px 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #ffcc80; 
+}
+
+.elite-left h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    line-height: 1.4;
+    text-align: center;
+}
+
+
+
+.elite-features {
+    font-size: 13px;
+    color: #ffcc80;
+    display: flex;
+    gap: 15px;
+    opacity: 0.9;
+  
+    justify-content: center;
+    
+}
+
+.elite-right {
+    text-align: center;
+}
+
+.elite-right p {
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.btn-get-invited {
+    background-color: #ffcc80;
+    color: #050a30;
+    border: none;
+    padding: 10px 25px;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-get-invited:hover {
+    background-color: #ffd9a3;
+}
+
+
+.steps-section {
+    padding: 40px 10%;
+    text-align: center;
+}
+
+.section-title {
+    font-size: 26px;
+    margin-bottom: 50px;
+    color: #333;
+}
+
+.section-title span {
+    color: #c2185b; 
+}
+
+.steps-grid {
+    display: flex;
+    justify-content: space-around;
+    gap: 30px;
+}
+
+.step-item {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.icon-box {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 20px;
+}
+
+.icon-box img {
+    width: 100%;
+    height: auto;
+}
+
+.step-item h3 {
+    margin-bottom: 10px;
+    color: #050a30;
+    font-size: 18px;
+}
+
+.step-item p {
+    font-size: 14px;
+    color: #777;
+    line-height: 1.5;
+}
+
+
+.cta-banner {
+    background-color: #c2185b;  
+    color: white;
+    padding: 9px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    font-size: 18px;
+}
+
+.btn-outline {
+    background: transparent;
+    border: 1px solid white;
+    color: white;
+    padding: 8px 30px;
+    border-radius: 5px;
+
+    
+}
+
+
+.category-section {
+    padding: 60px 90px;
+    text-align: center;
+    background-color: #fff;
+}
+
+.category-title {
+    font-size: 24px;
+    margin-bottom: 40px;
+    color: #050a30;
+}
+
+.category-title span {
+    color: #c2185b;
+}
+
+
+.category-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 equal columns */
+    gap: 20px;
+    padding: 10px 100px;
+}
+
+.category-card {
+    background: white;
+    padding: 40px 50px;
+    border-radius: 15px;
+    border: 1px solid #eee;
+    font-size: 15px;
+    color: #333;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.category-card:hover {
+    
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    background-color: #c2185b;
+}
+.testimonials-section {
+    padding: 60px 5%;
+    background-color: #fff;
+    text-align: center;
+}
+
+.testimonials-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.testimonial-grid {
+    display: flex;
+    gap: 25px;
+    justify-content: center;
+    flex-wrap: nowrap; /* Keeps cards in a row */
+}
+
+.testimonial-card {
+    background: #fff;
+    width: 350px;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-image {
+    height: 250px;
+    width: 100%;
+}
+
+.card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 25px;
+}
+
+.card-content h3 {
+    font-size: 18px;
+    color: #050a30;
+    margin-bottom: 15px;
+}
+
+.card-content p {
+    font-size: 14px;
+    color: #666;
+    line-height: 1.6;
+}
+
+
+.nav-arrow {
+    background: #e0e0e0;
+    color: #fff;
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    font-size: 24px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s;
+}
+
+.right-arrow {
+    background-color: #c2185b;
+}
+
+.nav-arrow:hover {
+    transform: scale(1.1);
+    opacity: 0.9;
+}
+.gallery-section {
+    padding: 60px 10%;
+    background-color: #fff;
+    text-align: center;
+}
+
+.gallery-title {
+    font-size: 28px;
+    margin-bottom: 40px;
+    color: #050a30; 
+}
+
+.gallery-title span {
+    color: #c2185b; 
+}
+
+.gallery-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 20px; 
+}
+
+.gallery-item {
+    width: 100%;
+    height: 250px; 
+    overflow: hidden;
+    border-radius: 20px; 
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    transition: transform 0.5s ease; 
+    cursor: pointer;
+}
+
+
+.gallery-item img:hover {
+    transform: scale(1.08);
+}
+/* Press Release Section */
+.press-section {
+    padding: 60px 10%;
+    text-align: center;
+    background-color: #fff;
+}
+
+.press-title {
+    font-size: 28px;
+    margin-bottom: 40px;
+    color: #050a30;
+}
+
+.press-title span {
+    color: #c2185b;
+}
+
+.press-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 30px;
+}
+
+.press-card {
+    background: #fff;
+    padding: 40px 30px;
+    border-radius: 15px;
+    text-align: left;
+    border: 1px solid #f0f0f0;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05); /* Subtle shadow from image */
+    transition: 0.3s;
+}
+
+.press-card:hover {
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+   
+    background-color: #c2185b;
+}
+
+.press-date {
+    display: block;
+    font-size: 13px;
+    color: #888;
+    margin-bottom: 15px;
+}
+
+.press-card h3 {
+    font-size: 16px;
+    color: #050a30;
+    line-height: 1.4;
+    font-weight: 600;
+}
+
+
+.main-footer {
+    padding: 60px 10%;
+    text-align: center;
+ 
+}
+
+.footer-description {
+    max-width: 1000px;
+    margin: 0 auto 30px;
+}
+
+.footer-description p {
+    font-size: 13px;
+    color: #555;
+    line-height: 1.8;
+    text-align: center;
+}
+
+.footer-links {
+    font-size: 14px;
+    color: #888;
+}
+
+.footer-links a {
+    text-decoration: none;
+    color: #050a30;
+    margin: 0 5px;
+    transition: 0.3s;
+}
+
+.footer-links a:hover {
+    color: #c2185b;
+}
+
+.trust-bar {
+    padding: 40px 10%;
+    text-align: center;
+    border-top: 1px solid #ddd;
+    position: relative;
+    margin-top: 50px;
+}
+
+.trust-badge {
+    background-color: #c2185b;
+    color: white;
+    display: inline-block;
+    padding: 8px 20px;
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 30px;
+    position: relative;
+
+}
+
+.trust-items {
+    display: flex;
+    justify-content: space-around;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.trust-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #050a30;
+    font-weight: 500;
+}
+
+.icon-circle {
+    width: 40px;
+    height: 40px;
+    border: 1px solid #555;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+}
+
+
+.detailed-footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 40px 10%;
+    background-color: #fff;
+    border-top: 1px solid #eee;
+}
+
+.footer-column {
+    flex: 1;
+}
+
+.footer-column h4 {
+    color: #333;
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+
+.underline {
+    width: 80%;
+    height: 1px;
+    background-color: #eee;
+    margin-bottom: 20px;
+}
+
+.footer-column ul {
+    list-style: none;
+}
+
+.footer-column ul li {
+    margin-bottom: 12px;
+}
+
+.footer-column ul li a {
+    text-decoration: none;
+    color: #666;
+    font-size: 13px;
+    transition: color 0.3s;
+}
+
+.footer-column ul li a:hover {
+    color: #c2185b;
+}
+
+
+
+
+.copyright-bar {
+    background-color: #f8f9fa;
+    padding: 15px 10%;
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    color: #333;
+    border-top: 1px solid #ddd;
+}
+
+.company-name {
+    color: #007bff;
+    font-weight: 600;
+}
+
+
+
+
+
+.scroll-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #c2185b;
+    color: white;
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 5px;
+    font-size: 20px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+    </style>
+</head>
+<body>
+
+    <header class="hero-section">
+        <nav class="navbar">
+            <div class="logo" style="height:40px">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQxEyKZeDtly1zrvaapgrBxdvhW_hONcz1vRA&s" alt="Logo"  width="50" style="border-radius: 50%;">
+            </div>
+            <div class="nav-links">
+                <a href="#" style="text-decoration:overline; text-decoration-color: rgb(248, 183, 3); text-decoration-thickness:2px;">Home</a>
+                <a href="#">Login / Sign Up</a>
+            </div>
+        </nav>
+
+        <div class="hero-content">
+            <h1>World's Leading Tamil Matrimony & Matchmaking Service</h1>
+            <div class="btn-group">
+                <button class="btn btn-register">Register With Us</button>
+                <button class="btn btn-login">Login User</button>
+            </div>
+        </div>
+    </header>
+
+    <section class="banner-container">
+    <div class="elite-card">
+        <div class="elite-left">
+            <h2>Tailored and Exclusive Matchmaking Services by <br>Tamil muhurtham</h2>
+            <div class="elite-features">
+                Top Rated Consultants  |  5 times higher success rates  |  100% Privacy
+            </div>
+        </div>
+        <div class="elite-right">
+            <p>Elite Matrimony</p>
+            <button class="btn-get-invited">Get Invited &rarr;</button>
+        </div>
+    </div>
+</section>
+
+<section class="steps-section">
+    <h2 class="section-title">Connect with your <span>Perfect Matches</span></h2>
+    
+    <div class="steps-grid">
+        <div class="step-item">
+            <div class="icon-box">
+                <img src="https://tamilmuhurtham.com/assets/Icons/book.svg" alt="Sign Up"> </div>
+            <h3>Sign Up</h3>
+            <p>Register for free & put up your Matrimony Profile</p>
+        </div>
+
+        <div class="step-item">
+            <div class="icon-box">
+                <img src="https://tamilmuhurtham.com/assets/Icons/heart.svg" alt="Connect">
+            </div>
+            <h3>Connect</h3>
+            <p>Select & Connect with Matches you like</p>
+        </div>
+
+        <div class="step-item">
+            <div class="icon-box">
+                <img src="https://tamilmuhurtham.com/assets/Icons/chat.svg" alt="Interact">
+            </div>
+            <h3>Interact</h3>
+            <p>Become a Premium Member & Start a Conversation</p>
+        </div>
+    </div>
+</section>
+
+<section class="cta-banner">
+    <p>Take Your first step in finding your perfect Match</p>
+    <button class="btn-outline">Get Started</button>
+</section>
+
+<section class="category-section">
+    <h2 class="category-title">Explore and get <span>your perfect match</span></h2>
+    
+    <div class="category-grid">
+        <div class="category-card">Brahmin</div>
+        <div class="category-card">Chamar</div>
+        <div class="category-card">Dhobi</div>
+        <div class="category-card">Brahmin - Anavil</div>
+        <div class="category-card">Brahmin - Audichya</div>
+        <div class="category-card">Brahmin - Barendra</div>
+        <div class="category-card">Brahmin - Bhatt</div>
+        <div class="category-card">Brahmin - Bhumihar</div>
+        <div class="category-card">Brahmin - Daivadnya</div>
+    </div>
+</section>
+<section class="testimonials-section">
+    <h2 class="section-title">Client <span>Testimonials</span></h2>
+
+    <div class="testimonials-container">
+        
+        <button class="nav-arrow left-arrow">&#8249;</button>
+
+        <div class="testimonial-grid">
+           
+            <div class="testimonial-card">
+                <div class="card-image">
+                    <img src="https://media.istockphoto.com/id/1186214696/photo/hindu-wedding-ritual-wherein-bride-and-groom-hand.jpg?s=612x612&w=0&k=20&c=fTlNejRdY7dkvk742auNgI3j6Ve9UqqWSnb3QJ-D2gw=" alt="Wedding Day">
+                </div>
+                <div class="card-content">
+                    <h3>A Day to Remember Forever</h3>
+                    <p>That day was really special for us, but more than the wedding, the way we found each other means everything. Finding the right match is not easy, but Tamil Muhurtham made it simple and smooth for us...</p>
+                </div>
+            </div>
+
+         
+            <div class="testimonial-card">
+                <div class="card-image">
+                    <img src="https://pellipoolajada.co/wp-content/uploads/2025/02/download-edited.webp" alt="Magical Experience">
+                </div>
+                <div class="card-content">
+                    <h3>A Truly Magical Experience!</h3>
+                    <p>Everything felt perfect — the smiles, the laughter, and all those beautiful moments we shared together. Seeing our family and friends around us with so much happiness made it even more special...</p>
+                </div>
+            </div>
+
+           
+            <div class="testimonial-card">
+                <div class="card-image">
+                    <img src="https://wevaphotography.com/wp-content/uploads/2021/10/Traditional-South-Indian-Wedding-Ceremony.jpg" alt="Perfection">
+                </div>
+                <div class="card-content">
+                    <h3>Love, Joy, and Perfection!</h3>
+                    <p>When I think about how our journey began, I can't help but feel thankful to Tamil Muhurtham. They were the reason our paths crossed and everything started to fall into place. From the very first step...</p>
+                </div>
+            </div>
+        </div>
+
+        
+        <button class="nav-arrow right-arrow">&#8250;</button>
+    </div>
+</section>
+<section class="gallery-section">
+    <h2 class="gallery-title">Our <span>Gallery</span></h2>
+    
+    <div class="gallery-grid">
+        <div class="gallery-item">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTqIBd_vB2vDQHd-4d9z5UJM52DynuiaYvVlg&s" alt="Wedding Stage">
+        </div>
+        <div class="gallery-item">
+            <img src="https://i.pinimg.com/736x/5c/f1/96/5cf196b6e165fc9641a9df257f9b1a24.jpg" alt="Haldi Ceremony">
+        </div>
+        <div class="gallery-item">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHdL3CsSDMw2hJm9aZpUFx50-3ZO5OvmOSoA&s" alt="Ring Exchange">
+        </div>
+        <div class="gallery-item">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQYRKc-FKVL8LWA6-JLX_NZCIwVKLiRbajmWw&s" alt="Bridal Jewelry">
+        </div>
+        <div class="gallery-item">
+            <img src="https://cdn.joyalukkas.in/media/mageplaza/blog/post/t/y/types_of_mangalsutra_from_different_states_of_india_1_.png" alt="Mangalsutra">
+        </div>
+    </div>
+</section>
+
+<section class="press-section">
+    <h2 class="press-title">Press <span>Release</span></h2>
+    
+    <div class="press-grid">
+     
+        <div class="press-card">
+            <span class="press-date">Aug 20 , 2025</span>
+            <h3>Tamilmuhurtham Expands Wedding Services Nationwide</h3>
+        </div>
+      
+        <div class="press-card">
+            <span class="press-date">Aug 14 , 2025</span>
+            <h3>Tamilmuhurtham Introduces AI - Powered Wedding Planning</h3>
+        </div>
+     
+        <div class="press-card">
+            <span class="press-date">Sep 8 , 2025</span>
+            <h3>Tamilmuhurtham Partners with Top Wedding Venues</h3>
+        </div>
+   
+        <div class="press-card">
+            <span class="press-date">Sep 20 , 2025</span>
+            <h3>Tamilmuhurtham Launches Custom Wedding Packages</h3>
+        </div>
+    </div>
+</section>
+
+
+<footer class="main-footer">
+    <div class="footer-description">
+        <p>www . tamilmuhurtham . com , one of India's most Trusted Matrimony services , is redefining the way Tamil brides and Tamil grooms meet for marriage . www . tamilmuhurtham . com - part of India's No . 1 Matrimony and Matchmaking Service - www . tamilmuhurtham . com , was founded with a simple objective : to help people find happiness . www . tamilmuhurtham . com is a pioneer in what is sometimes known as the Tamil Matrimony & matchmaking category , having touched more than 3 . 5 million lives . A service trusted by Tamil communities worldwide . www . tamilmuhurtham . com provides filters to find matches by preferred locations including major cities such as Chennai , Coimbatore , Madurai , Tiruchirappalli , Mumbai , Bengaluru , Delhi and more . Additionally , filter profiles by Tamil - speaking communities such as Iyer , Nadar , Vanniyar , etc .</p>
+    </div>
+    
+    <div class="footer-links">
+        <a href="#">India</a> | 
+        <a href="#">USA</a> | 
+        <a href="#">Canada</a> | 
+        <a href="#">UK</a> | 
+        <a href="#">Singapore</a> | 
+        <a href="#">Australia</a> | 
+        <a href="#">UAE</a> | 
+        <a href="#">NRI Matrimonials</a>
+    </div>
+</footer>
+
+
+<section class="trust-bar">
+    <div class="trust-badge">Trusted by Millions</div>
+    <div class="trust-items">
+        <div class="trust-item">
+            <span class="icon-circle">👤+</span>
+            <p>Best Matches</p>
+        </div>
+        <div class="trust-item">
+            <span class="icon-circle">👤</span>
+            <p>Verified Profiles</p>
+        </div>
+        <div class="trust-item">
+            <span class="icon-circle">🔒</span>
+            <p>100% Privacy</p>
+        </div>
+    </div>
+</section>
+
+
+<footer class="detailed-footer">
+    <div class="footer-column">
+        <h4>Need Help?</h4>
+        <div class="underline"></div>
+        <ul>
+            <li><a href="#">Member Login</a></li>
+            <li><a href="#">Sign Up</a></li>
+            <li><a href="#">Partner Search</a></li>
+            <li><a href="#">How to Use tamilmuhurtham . com</a></li>
+            <li><a href="#">Premium Memberships (Login Required)</a></li>
+            <li><a href="#">Customer Support</a></li>
+            <li><a href="#">Site Map</a></li>
+        </ul>
+    </div>
+
+    <div class="footer-column">
+        <h4>Company</h4>
+        <div class="underline"></div>
+        <ul>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Contact Us</a></li>
+        </ul>
+    </div>
+
+    <div class="footer-column">
+        <h4>Privacy & You</h4>
+        <div class="underline"></div>
+        <ul>
+            <li><a href="#">Terms of Use</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Be Safe Online</a></li>
+            <li><a href="#">Child Safety</a></li>
+            <li><a href="#">Report Misuse</a></li>
+        </ul>
+    </div>
+
+    <div class="footer-column">
+        <h4>More</h4>
+        <div class="underline"></div>
+        <ul>
+            <li><a href="#">VIP Tamilmuhurtham</a></li>
+            <li><a href="#">Success Stories</a></li>
+            <li><a href="#">Tamilmuhurtham Centres</a></li>
+        </ul>
+    </div>
+</footer>
+
+
+<div class="copyright-bar">
+    <div class="copy-left">
+        2025 <span class="company-name">MANGALA MANA MALAI PRIVATE LIMITED</span> / All rights reserved / v 1 . 0 . 7
+    </div>
+    <div class="copy-right">
+        Passionately created by Codeship pvt ltd 
+    </div>
+</div>
+<button class="scroll-top">^</button>
+
+</body>
+</html>
