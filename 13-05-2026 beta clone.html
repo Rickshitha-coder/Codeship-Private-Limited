@@ -1,0 +1,1336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get Social.</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+body {
+    background-color:  #E0F2F1;
+    overflow-x: hidden;
+}
+
+
+.navbar {
+    background-color: #006D6D;
+    padding: 15px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+}
+
+.logo img {
+    height: 40px; 
+}
+
+.nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.sign-in {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: white;
+    padding: 8px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.menu-toggle {
+    background-color:  #FF8C00;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+
+.hero-section {
+    position: relative;
+    height: 70vh;
+    padding: 50px 10px;
+      background-image:  linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)),url('https://static.vecteezy.com/system/resources/previews/009/189/635/non_2x/winter-park-scenery-with-happy-family-in-santa-hats-walking-city-silhouette-christmas-tree-bench-snowy-trees-flat-illustration-vector.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.search-container {
+    background-color: #006D6D;
+    width: 420px;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    position: relative;
+    
+}
+
+.tab-buttons {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.tab {
+    border: none;
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 0.9rem;
+}
+
+
+
+.input-group {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.input-group input {
+    width: 80%;
+    padding: 10px 10px;
+    border-radius: 8px;
+    border: none;
+    font-size: 1rem;
+    color: #666;
+}
+
+.select-icon {
+    position: absolute;
+    right: 100px;
+    top: 13px;
+    color: #888;
+}
+
+.explore-btn {
+    background-color: #FF8C00;
+    color: white;
+    border: none;
+    width: 60%;
+    padding: 5px 25px;
+    border-radius: 25px;
+    font-weight: bold;
+    font-size: 15px;
+    cursor: pointer;
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.tagline {
+    color: white;
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+.xcros-container {
+   
+    width: 100%;
+    text-align: center;
+}
+
+.main-title {
+    font-size: 2rem;
+    font-weight: 800;
+    color: #333;
+    margin-bottom: 40px;
+    letter-spacing: 1px;
+    padding:10px 20px;
+}
+
+.content-wrapper {
+    display: flex;
+    gap: 30px;
+    text-align: left;
+    align-items: flex-start;
+}
+
+
+.image-box {
+    flex: 1;
+    position: relative;
+}
+
+.image-box img {
+    width: 100%;
+    display: block;
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.1);
+}
+
+.overlay-tag {
+    position: absolute;
+    bottom: 40px;
+    left: 0;
+    background: white;
+    padding: 10px 15px;
+    font-size: 0.75rem;
+    font-weight: bold;
+    color: #333;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.8);
+}
+
+
+.text-content {
+    flex: 1;
+    height:50vh;
+ 
+}
+
+.text-content h2 {
+    font-size: 1.4rem;
+    color: #111;
+    margin-bottom: 20px;
+}
+
+.scroll-area {
+    overflow-y: auto;
+    padding-right: 20px;
+    height: 300px;
+    scrollbar-color: #006D6D #E0F2F1;
+    scrollbar-width: thin;
+}
+
+
+.scroll-area p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: #444;
+    margin-bottom: 15px;
+}
+.services-section {
+  
+    margin: 50px auto;
+    background-color: #FFE5B4; 
+    color: #333;
+
+}
+
+
+.section-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.subtitle {
+    font-size: 1.1rem;
+    letter-spacing: 2px;
+    font-weight: 500;
+    padding-top:40px;
+}
+
+.main-title {
+    font-size: 3.5rem;
+    font-weight: 500;
+     margin-bottom: 5px;
+    color: #222;
+    
+}
+
+.section-label {
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+    font-weight: 600;
+     margin-top: 0;
+    
+}
+
+
+.filter-container {
+    margin-bottom: 60px;
+}
+
+.category-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 25px;
+}
+
+.btn-category {
+    background: transparent;
+    border: 1px solid #008080;
+    color: #333;
+    padding: 8px 18px;
+    border-radius: 4px;
+    font-weight: 600;
+    font-size: 0.85rem;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-category.active {
+    background-color: #008080;
+    color: white;
+}
+
+.tag-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.tag {
+    background-color: #D6EAF8; 
+    padding: 8px 15px;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    color: #444;
+}
+
+/* Bottom Content Grid */
+.content-grid {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr;
+    gap: 40px;
+    align-items: start;
+    margin-top: 40px;
+    padding: 30px;
+}
+
+.primary-text h2 {
+    font-size: 1.8rem;
+    line-height: 1.3;
+    font-weight: 700;
+}
+
+.secondary-text p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: #444;
+}
+
+.highlight-text p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+.ads-container {
+
+    margin: 10px auto;
+   
+    padding: 20px;
+}
+
+
+.ads-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 25px;
+}
+
+.ads-header h2 {
+    color: #000;
+    padding: 0 15px;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.line {
+    flex-grow: 1;
+    height: 2px;
+    background-color: #004d40;
+    position: relative;
+}
+
+
+.ads-grid {
+    display: flex;  
+    gap: 15px;
+
+}
+
+
+.ad-card {
+    flex: 1;
+    height: 400px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 15px;
+    position: relative;
+    overflow: hidden;
+    color: white;
+    cursor: pointer;
+   
+}
+
+
+
+
+.card-content {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 15px;
+    
+    background: linear-gradient(transparent, rgba(0,0,0,0.8));
+}
+
+.title {
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin-bottom: 2px;
+}
+
+.type {
+    font-size: 0.85rem;
+    margin-bottom: 10px;
+    opacity: 0.9;
+}
+
+.card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.views {
+    font-size: 0.8rem;
+    background: rgba(255,255,255,0.2);
+    padding: 4px 8px;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.details-btn {
+    background-color: #ff9800;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 15px;
+    font-size: 0.75rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+.explore-section {
+
+    margin: 0 auto;
+    background-color: #9fd9ddd8;
+}
+
+.explore-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.subtitle {
+    color: #008080;
+    font-size: 0.85rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+    
+}
+
+.main-title {
+    font-size: 2rem;
+    color: #333;
+    
+}
+
+.title-underline {
+    width: 50px;
+    height: 4px;
+    background-color: #FF8C00;
+    margin: 0 auto;
+    border-radius: 2px;
+}
+
+
+.explore-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+  
+    padding:20px;
+}
+
+.explore-column {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+
+.column-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.column-header h3 {
+    color: #008080;
+    font-size: 1.1rem;
+}
+
+.column-header h3 i {
+    margin-right: 8px;
+}
+
+.filter-tabs {
+    display: flex;
+    gap: 8px;
+}
+
+.filter-btn {
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: bold;
+    cursor: pointer;
+    border: 1px solid #008080;
+}
+
+.filter-btn.active {
+    background-color: #008080;
+    color: white;
+}
+
+.filter-btn:not(.active) {
+    background: white;
+    color: #008080;
+}
+
+.item-card {
+    display: flex;
+    border: 1px solid #eee;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.card-image {
+    width: 100px;
+    border-right: 3px solid #FF8C00;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f9f9f9;
+}
+
+.card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.placeholder-icon {
+    font-size: 2.5rem;
+    color: #ccc;
+}
+
+.card-details {
+    flex: 1;
+    padding: 15px;
+}
+
+.card-details h4 {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.card-details ul {
+    list-style: none;
+}
+
+.card-details li {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.85rem;
+    color: #666;
+    margin-bottom: 5px;
+}
+
+.card-details li i {
+    color: #008080;
+    width: 20px;
+}
+
+.val {
+    font-weight: bold;
+    color: #333;
+}
+
+
+.view-all-btn {
+    width: 100%;
+    background-color: #008080;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.view-all-btn:hover {
+    background-color: #006666;
+}
+
+.digital-realm-section {
+    background-color: #FF9800;
+    padding: 40px;
+    display: flex;
+    justify-content: center;
+}
+
+.main-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto auto;
+    gap: 20px;
+    max-width: 1200px;
+    width: 100%;
+}
+
+.stat-block {
+    background: linear-gradient(to right, #00897B 0%, #00897B 40%, #B8860B 100%);
+    border-radius: 10px;
+    height: 160px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.stat-block .number {
+    font-size: 2rem;
+    font-weight: 900;
+    font-family: 'Arial Black', sans-serif;
+}
+
+.stat-block .label {
+    font-size: 0.8rem;
+    font-family: Arial, sans-serif;
+}
+
+
+.info-content {
+    grid-column: 3 / span 2;
+    background: white;
+    border-radius: 10px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.title-top {
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: #111;
+}
+
+.headline {
+    font-family: 'Arial Black', sans-serif;
+    font-size: 1.6rem;
+    line-height: 1.3;
+    color: #000;
+}
+
+
+.video-preview {
+    grid-column: 1 / span 2;
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    height: 380px;
+    background: #000;
+    cursor: pointer;
+}
+
+.bg-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+
+.box-3 { 
+    rid-column: 3; 
+}
+.box-4 { 
+    grid-column: 4;
+ }
+
+.app-download-section {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
+                      url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRqO2za3VD607k_EbDvApRtazAXU5PuZ1jzfQ&s'); 
+    background-size: cover;
+    background-position: center;
+    padding: 80px 40px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.app-content-container {
+    max-width: 1200px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+}
+
+.app-text-content {
+    flex: 1;
+}
+
+.app-title {
+    color: #FF8C00; 
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin-bottom: 20px;
+}
+
+.app-description {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    max-width: 500px;
+}
+
+.download-stats h3 {
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+}
+
+.stat-number {
+    font-size: 2rem;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 30px;
+}
+
+
+.qr-container {
+    display: flex;
+    gap: 20px;
+}
+
+.qr-card {
+    background: white;
+    padding: 15px;
+    border-radius: 12px;
+    width: 160px;
+    text-align: center;
+    color: #333;
+}
+
+.qr-card img {
+    width: 100%;
+    height: 100px;
+    margin-bottom: 10px;
+}
+
+.qr-card p {
+    font-size: 0.75rem;
+    font-weight: bold;
+    line-height: 1.2;
+}
+
+/* Phone Mockup Styling */
+.phone-mockup {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+
+}
+
+.phone-mockup img {
+    max-width: 350px; 
+    height: 400px;
+     border-radius: 20px;
+}
+
+
+.join-us-section {
+    background-color: #000; 
+  
+    color: #fff;
+    padding: 80px 40px;
+    font-family: Arial, sans-serif;
+}
+
+.join-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    gap: 50px;
+    align-items: flex-start;
+}
+
+.join-content {
+    flex: 1.2;
+}
+
+.join-header {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: #fff;
+}
+
+.join-subheader {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    font-weight: normal;
+}
+
+.purpose-text {
+    line-height: 1.6;
+    font-size: 1.1rem;
+    color: #eee;
+}
+
+.right-panel {
+    flex: 1;
+}
+
+/* White Information Card */
+.info-card {
+    background-color: #fff;
+    color: #333;
+    padding: 40px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+    min-height: 200px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+}
+
+.quick-links h3 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+}
+
+.link-buttons {
+    display: flex;
+    gap: 20px;
+}
+
+.link-btn {
+    background-color: #222; /* Dark button color */
+    color: #fff;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background 0.3s;
+}
+
+.link-btn:hover {
+    background-color: #444;
+}
+
+
+
+
+.footer-section {
+            background-color: #008080;
+            color: white;
+            padding-top: 50px;
+            font-size: 0.9rem;
+        }
+
+        .footer-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            padding: 0 40px 40px 40px;
+            gap: 40px;
+        }
+
+        .footer-col {
+            flex: 1;
+            min-width: 280px;
+        }
+
+        .footer-logo {
+            width: 100%;
+            max-width: 280px;
+            background: black;
+            padding: 10px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+        }
+
+        .agent-profile {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 15px;
+        }
+
+        .agent-profile img {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .contact-item {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 10px 15px;
+            border-radius: 25px;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .contact-item i { color: #ffa500; }
+
+        .newsletter-link {
+            display: block;
+            margin-top: 15px;
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .newsletter-link span { color: #ffa500; }
+
+        .bottom-bar {
+            background-color: #ff9900;
+            padding: 15px 40px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            color: white;
+            gap: 15px;
+        }
+
+        .bottom-bar a { color: white; 
+            text-decoration: none; 
+        }  
+
+    </style>
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="logo">
+            <img src="https://xcros.in/image/Preloader%20Logo.png" alt="logo" width="40">
+        </div>
+        <div class="nav-actions">
+            <button class="sign-in"><i class="bi-person"></i> Sign In ></button>
+            <div class="menu-toggle"><i class="bi-list"></i></div>
+        </div>
+    </header>
+
+    <main class="hero-section">
+        <div class="search-container">
+            <div class="tab-buttons">
+                <button class="tab" style="background-color:#FF8C00; color:white; "><i class="bi-geo-alt-fill"></i> By Pincode</button>
+                <button class="tab"><i class="bi-geo-alt-fill"></i> By City</button>
+            </div>
+            
+            <div class="input-group">
+                <input type="text" placeholder="Enter Pincode">
+                <i class="bi bi-chevron-down select-icon"></i>
+            </div>
+
+            <button class="explore-btn">Explore Location<i class="bi bi-arrow-right" style="padding:10px 20px;"></i></button>
+            
+            <p class="tagline">Explore your location with XCROS</p>
+        </div>
+
+      
+    </main>
+    <section class="xcros-container">
+    <h1 class="main-title">XCROS BY GUDVIL NEXUS</h1>
+    
+    <div class="content-wrapper">
+        <div class="image-box">
+          
+            <img src="https://xcros.in/image/Introsection.jpg" alt="People walking on street">
+            <div class="overlay-tag">
+                LOCATION INFO &<br>SERVICES
+            </div>
+        </div>
+
+        <div class="text-content">
+            <h2>Making a difference, one innovation at a time.</h2>
+            
+            <div class="scroll-area">
+                <p>Welcome to <strong>XCROS</strong> by <strong>GUDVIL</strong>, where transforming lives is at the heart of everything we do. We are an ambitious, employee-owned community interest company.</p>
+                
+                <p><strong>Our culture</strong> is built on a foundation of care, innovation, and empathy. Our mission is simple: to connect and educate people, while pioneering innovative technological solutions.</p>
+                
+                <p><strong>XCROS</strong> by <strong>GUDVIL</strong> supports local community's residents and businesses to be strong and successful.</p>
+                
+                <p>Our vision is to create a fairer society where every individual thrives. We believe local communities are the key. Every day they unlock the power of community.</p>
+                
+                <p><strong>XCROS project</strong> aims to support and capitalize by carrying out projects and activities strictly related to location-based communities.</p>
+                
+                <p><strong>XCROS guide</strong> gathers all essential information to facilitate a pleasant experience in your location.</p>
+               
+                <p><strong>Join our Journey</strong> - Explore, discover, and see for yourself the unique qualities that set us apart in delivering exceptional services.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="services-section">
+    <header class="section-header">
+        <p class="subtitle">LET'S WORK TOGETHER</p>
+        <h1 class="main-title" style="word-spacing: 15px; letter-spacing: 10px;">WHAT WE DO</h1>
+        <p class="section-label">OUR SERVICES</p>
+    </header>
+
+    <div class="filter-container">
+        
+        <div class="category-row">
+            <button class="btn-category active">MAIN</button>
+            <button class="btn-category">AUXILLARY</button>
+            <button class="btn-category">HR</button>
+            <button class="btn-category">CLUB</button>
+            <button class="btn-category">LEISURE</button>
+            <button class="btn-category">THIRD PARTY</button>
+            <button class="btn-category">IT SERVICES</button>
+        </div>
+
+        
+        <div class="tag-row">
+            <span class="tag">Location</span>
+            <span class="tag">Guide</span>
+            <span class="tag">Directory</span>
+            <span class="tag">Marketplace</span>
+            <span class="tag">Community</span>
+            <span class="tag">Government</span>
+        </div>
+    </div>
+
+    <div class="content-grid">
+        <div class="grid-item primary-text">
+            <h2>Everything you need!<br>We shape the digital realm.</h2>
+        </div>
+        <div class="grid-item secondary-text">
+            <p>From informative to e-commerce services, we create one-of-a-kind digital experiences that stand out to engage and perform.</p>
+        </div>
+        <div class="grid-item highlight-text">
+            <p><strong>We empower local communities by building intelligent, scalable digital solutions that solve local problems.</strong></p>
+        </div>
+    </div>
+</section>
+<section class="ads-container">
+    <div class="ads-header">
+        <span class="line"></span>
+        <h2>Advertisements</h2>
+        <span class="line"></span>
+    </div>
+
+    <div class="ads-grid">
+        <!-- Card 1 -->
+        <div class="ad-card" style="background-image: url('https://xcross-ftp.s3.ap-south-1.amazonaws.com/public/xcross/images/2026/05/b425d2d8-3347-4512-a45e-82db9c63d97d-images-1080.webp');">
+            <div class="card-content">
+                <h3 class="title">test</h3>
+                <p class="type">image</p>
+                <div class="card-footer">
+                    <span class="views"><i class="bi-eye"></i> 0</span>
+                    <button class="details-btn">Details ></button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="ad-card" style="background-image: url('https://xcross-ftp.s3.ap-south-1.amazonaws.com/public/xcross/images/2026/05/f0a038c2-92b7-47b3-b399-1adb046d8d31-butterfly-1080.webp');">
+            <div class="card-content">
+                <h3 class="title">1234567</h3>
+                <div class="card-footer">
+                    <span class="views"><i class="bi-eye"></i> 0</span>
+                    <button class="details-btn">Details ></button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="ad-card" style="background-image: url('https://xcross-ftp.s3.ap-south-1.amazonaws.com/public/xcross/2026/2/484e718d-2943-496e-a329-b8347999d31c-ad-2-1080.webp');">
+            <div class="card-content">
+                <h3 class="title">test</h3>
+                <p class="type">image</p>
+                <div class="card-footer">
+                    <span class="views"><i class="bi-eye"></i> 12</span>
+                    <button class="details-btn">Details ></button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="ad-card" style="background-image: url('https://xcross-ftp.s3.ap-south-1.amazonaws.com/public/xcross/2026/2/b2abddfd-6b2e-4644-a96d-eb80e613bafb-b69f6a24c80de814253690c332a282a7beea2b81-1080.webp');">
+            <div class="card-content">
+                <h3 class="title">test</h3>
+                <p class="type">video</p>
+                <div class="card-footer">
+                    <span class="views"><i class="bi-eye"></i> 30</span>
+                    <button class="details-btn">Details ></button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 5 -->
+        <div class="ad-card" style="background-image: url('https://xcross-ftp.s3.ap-south-1.amazonaws.com/public/xcross/2026/2/6a579976-84ac-499d-b1dc-ecfba36f5ef7-pets_&_animals-1080.webp');">
+            <div class="card-content">
+                <h3 class="title">test3</h3>
+                <p class="type">live</p>
+                <div class="card-footer">
+                    <span class="views"><i class="bi-eye"></i> 69</span>
+                    <button class="details-btn">Details ></button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="explore-section">
+    <div class="explore-header">
+        <p class="subtitle">DISCOVER YOUR AREA</p>
+        <h2 class="main-title">Explore Pincodes & Cities</h2>
+        <div class="title-underline"></div>
+    </div>
+
+    <div class="explore-grid">
+      
+        <div class="explore-column">
+            <div class="column-header">
+                <h3><i class="bi-geo-alt-fill"></i> Pincodes</h3>
+                <div class="filter-tabs">
+                    <button class="filter-btn active">Featured</button>
+                    <button class="filter-btn">Popular</button>
+                </div>
+            </div>
+            <div class="item-card">
+                <div class="card-image pincode-img">
+                    <img src="https://xcross-ftp.s3.ap-south-1.amazonaws.com/public/xcross/2025/12/d5e66373-5d00-449e-945e-e3f4288e4c40-bnner2-720.webp" alt="140278">
+                </div>
+                <div class="card-details">
+                    <h4>140278</h4>
+                    <ul>
+                        <li><span><i class="bi-building"></i> Town</span> <span class="val">Markup</span></li>
+                        <li><span><i class="bi-person"></i> Users</span> <span class="val">3</span></li>
+                        <li><span><i class="bi-list"></i> Listings</span> <span class="val">16</span></li>
+                    </ul>
+                </div>
+            </div>
+            <button class="view-all-btn">View All Pincodes <i class="bi-arrow-right"></i></button>
+        </div>
+
+        <!-- Cities Column -->
+        <div class="explore-column">
+            <div class="column-header">
+                <h3><i class="fa-solid fa-building"></i> Cities</h3>
+                <div class="filter-tabs">
+                    <button class="filter-btn active">Featured</button>
+                    <button class="filter-btn">Popular</button>
+                </div>
+            </div>
+            <div class="item-card">
+                <div class="card-image city-img">
+                    <i class="bi-image"></i>
+                </div>
+                <div class="card-details">
+                    <h4>Chandigarh</h4>
+                    <ul>
+                        <li><span><i class="bi-geo-alt-fill"></i> Pincodes</span> <span class="val">1</span></li>
+                        <li><span><i class="bi-person"></i> Users</span> <span class="val">0</span></li>
+                        <li><span><i class="bi-list "></i> Listings</span> <span class="val">0</span></li>
+                    </ul>
+                </div>
+            </div>
+            <button class="view-all-btn">View All Cities <i class="bi-arrow-right"></i></button>
+        </div>
+    </div>
+</section>
+
+<section class="digital-realm-section">
+    <div class="main-grid">
+        
+        <!-- Top Stats Row -->
+        <div class="stat-block box-1">
+            <span class="number">250</span>
+            <span class="label">Countries</span>
+        </div>
+
+        <div class="stat-block box-2">
+            <span class="number">36</span>
+            <span class="label">States</span>
+        </div>
+
+        <!-- White Text Content Box -->
+        <div class="info-content">
+            <p class="title-top">OUR DIGITAL REALM</p>
+            <h2 class="headline">GET READY TO START YOUR EXCITING JOURNEY OUR AGENCY WILL LEAD YOU TO CONQUER THE DIGITAL WORLD</h2>
+        </div>
+
+       <div class="video-preview">
+    <video autoplay muted loop playsinline class="bg-video">
+        <source src="https://xcros.in/image/digital.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    </div>
+        <!-- Bottom Stats Row -->
+        <div class="stat-block box-3">
+            <span class="number">4,199</span>
+            <span class="label">Cities</span>
+        </div>
+
+        <div class="stat-block box-4">
+            <span class="number">2</span>
+            <span class="label">Pincodes / Towns</span>
+        </div>
+
+    </div>
+</section>
+
+<section class="app-download-section">
+    <div class="app-content-container">
+        <!-- Left Side: Text and QR Codes -->
+        <div class="app-text-content">
+            <h1 class="app-title">Our App Available Now</h1>
+            <p class="app-description">
+                Get the best at your location, all in one place. Beautifully designed and extremely intuitive to use. 
+                Live Local. Love Local. Support Local.
+            </p>
+            
+            <div class="download-stats">
+                <h3>Downloads</h3>
+                <span class="stat-number">0</span>
+            </div>
+
+            <div class="qr-container">
+                <div class="qr-card">
+                    <img src="https://xcros.in/image/web-qr.png" alt="Playstore QR">
+                    <p>Scan to download app from Playstore</p>
+                </div>
+                <div class="qr-card">
+                    <img src="https://xcros.in/image/web-qr.png" alt="Appstore QR">
+                    <p>Scan to download app from Appstore</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Right Side: Phone Mockup -->
+        <div class="phone-mockup">
+            <img src="https://xcros.in/image/phone_screen2.png" alt="App Preview on Phone">
+        </div>
+    </div>
+</section>
+
+
+<section class="join-us-section">
+    <div class="join-container">
+        <!-- Left Side Content -->
+        <div class="join-content">
+            <h1 class="join-header"><u>Join Us Now!</u></h1>
+            <h2 class="join-subheader">Join us and reap the benefits of Our Platform!</h2>
+            <p class="purpose-text">
+                <strong>Our Purpose:</strong> Connecting and Celebrating the community and economy via local networks. 
+                Through digital services and direct support, we strive to inspire residents and visitors alike to invest 
+                in our unique local businesses and contribute to the sustainable growth of our region.
+            </p>
+        </div>
+
+        <!-- Right Side Content -->
+        <div class="right-panel">
+            <div class="info-card">
+                <p>
+                    A location guide is a resource that provides information and recommendations. 
+                    It helps visitors and locals navigate, discover, and make the most of their experience.
+                </p>
+            </div>
+
+            <div class="quick-links">
+                <h3>Quick links!</h3>
+                <div class="link-buttons">
+                    <button class="link-btn">Team</button>
+                    <button class="link-btn">Contact Us</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+ <footer class="footer-section">
+        <div class="footer-container">
+            <div class="footer-col">
+                <img src="https://xcros.in/image/new_logo.jpg" alt="Xcros logo" class="footer-logo">
+                <p>Our futures are intertwined, so let's rededicate ourselves to serving the common good. Be a part of your online community.</p>
+                <p><strong>Find us on:</strong></p>
+                <div>
+                    <i class="bi bi-facebook"></i>
+                    <i class="bi bi-instagram"></i>
+                    <i class="bi bi-linkedin"></i>
+                </div>
+            </div>
+
+            <div class="footer-col">
+                <h3>Project Agent</h3>
+                <div class="agent-profile">
+                    <img src="https://xcros.in/about-xcros/project-partner-pf.png" alt="agent">
+                    <span>Principal Agent</span>
+                </div>
+                <div class="contact-item"><i class="bi bi-envelope"></i> principal.agent@xcros.example</div>
+                <div class="contact-item"><i class="bi bi-telephone"></i> +1 202 555 0172</div>
+                <div class="contact-item"><i class="bi bi-geo-alt"></i> Location Guide Support Desk</div>
+                <a href="#" class="newsletter-link">Subscribe to Local <span>Newsletter →</span></a>
+            </div>
+
+            <div class="footer-col">
+                <h3>Network Agent</h3>
+                <div class="agent-profile">
+                    <img src="https://xcros.in/about-xcros/project-partner-pf.png" alt="agent">
+                    <span>Network Agent</span>
+                </div>
+                <div class="contact-item"><i class="bi bi-envelope"></i> network.agent@xcros.example</div>
+                <div class="contact-item"><i class="bi bi-telephone"></i> +1 202 555 0172</div>
+                <div class="contact-item"><i class="bi bi-geo-alt"></i> Location Guide Support Desk</div>
+                <a href="#" class="newsletter-link">Subscribe to Local <span>Newsletter →</span></a>
+            </div>
+        </div>
+
+        <div class="bottom-bar">
+            <div class="bottom-left">
+                <span>2024-26 © Gudvil Nexus ® | </span>
+                <a href="#">Contact Us</a>
+                <span  style="padding: 20px;">V0.0.3</span>
+            </div>
+            <div class="bottom-right">
+                <a href="#" style="padding:20px;">Privacy & Terms | </a>
+                <i class="bi bi-globe"></i>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
