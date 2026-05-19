@@ -1,0 +1,131 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>JS Test</title>
+</head>
+<body>
+
+  <h1>JavaScript String Methods</h1>
+
+  <div id="output"></div>
+<br><br>
+  <h1>Substrings of a word </h1>
+  <input type="text" id="word" placeholder="Enter any word">
+  <button onclick="show()">Show</button>
+  <button onclick="foreach()">Show using foreach </button>
+
+  <button onclick="inUSE()">Show using for in </button>
+
+  <p id="res">  </p>
+  <p id="res1">  </p>
+  <p id="res2">  </p>
+  <script>
+    var name = "    rickshitha anandakumar       ";
+    var clg = "SDNB Vaishnav College for women";
+    var n = "RICKSHI";
+
+    var result = "";
+
+    result += "Name: " + name + "<br><br>";
+    result += "College: " + clg + "<br><br>";
+    result += "N: " + n + "<br><br>";
+    result += "Name Length: " + name.length + "<br>";
+    result += "N Length: " + n.length + "<br>";
+    result += "Substring (0, 5): " + n.substring(0,5) + "<br>";
+    result += "Substr (1,3): " + n.substr(1,3) + "<br>";
+    result += "Slice (1,6): " + n.slice(1,6) + "<br>";
+    result += "Replace (i,I) : " + name.replace('i','I') + "<br>";
+    result += "Replace All a: " + name.replace(/a/g,'A') + "<br>";
+    result += "Uppercase: " + name.toUpperCase() + "<br>";
+    result += "Lowercase: " + name.toLowerCase() + "<br>";
+    result += "Concat : " + name.concat(' from Chengalpatu') + "<br>";
+    result += "Concat with College : " + name.concat(' from ', clg) + "<br>";
+    result += "Trim : " + name.trim() + "<br>";
+    result+= "Trim Start : " +name.trimStart() + "<br>";
+    result+= "Trim End : " + name.trimEnd() + "<br>";
+    result += "PadStart: " + n.padStart(10,'a') + "<br>";
+    result += "PadEnd: " + n.padEnd(10,'a') + "<br>";
+    result += "CharAt(5): " + name.charAt(5) + "<br>";
+    result += "CharCodeAt(13): " + name.charCodeAt(13) + "<br>";
+    result += "Split: " + name.split(' ') + "<br>";
+    result += "Includes 'rick': " + name.includes('rick') + "<br>";
+    result += "Starts with 'ri': " + name.startsWith('ri') + "<br>";
+    result += "Ends with 'mar': " + name.endsWith('mar') + "<br>";
+
+    document.getElementById("output").innerHTML = result;
+
+    function show()
+   {
+    var str=document.getElementById("word").value;//ab
+    var res=[];//a ab b
+    var count=0;//1 2 3
+    
+    for(var i=0;i<str.length;i++)
+   {
+    for(var j=i+1;j<=str.length;j++)
+   {
+    res.push(str.substring(i,j));//a ab b
+    count++;//1 2 3
+   }
+   }
+  
+  document.getElementById("res").innerHTML=res.join("<br> ")+"<br>" +"total count: "+count;
+   }  
+
+
+
+   <!--for each-->
+   function foreach()
+   {
+    var str=document.getElementById("word").value;//ab
+    var res=[];//a ab b
+    var count=0;//1 2 3
+    
+    for(var i=0;i<str.length;i++)
+   {
+    for(var j=i+1;j<=str.length;j++)
+   {
+    res.push(str.substring(i,j));//a ab b
+    count++;//1 2 3
+   }
+   }
+   var output="";
+   res.forEach(function(substring){
+    output+=substring+"<br>";
+   });  
+   document.getElementById("res1").innerHTML=output+"<br>" +"total count: "+count;
+   }
+
+
+  <!--for in-->
+  function inUSE()
+   {
+    var str=document.getElementById("word").value;//ab
+    var res=[];//a ab b
+    var count=0;//1 2 3
+    
+    for(var i=0;i<str.length;i++)
+   {
+    for(var j=i+1;j<=str.length;j++)
+   {
+    res.push(str.substring(i,j));//a ab b
+    count++;//1 2 3
+   }
+   }
+   var output="";
+   for(var index in res)
+   {
+    output+=res[index]+"<br>";
+   }
+   document.getElementById("res2").innerHTML=output+"<br>" +"total count: "+count;
+   }
+  
+  </script>
+
+</body>
+</html>
+
+
+
