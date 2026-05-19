@@ -1,0 +1,323 @@
+//javascript functions
+
+
+const num=()=>
+{
+      console.log("Print 1 to 10 using arrow function")
+
+  for(let i=1;i<=10;i++)
+  {
+    console.log(i);
+  }
+      console.log("---------------------------------")
+
+}
+num();
+
+
+var st=(s)=>
+{
+  console.log("palindrome Checking using arrow function");
+  if(s==s.split('').reverse().join(''))
+  {
+    console.log(s+" is palindorme");
+  }
+  else
+  {
+    console.log(s+" is not palindrome");
+  }
+  
+  console.log("-----------------------------------")
+}
+st("madam");
+st("cat");
+
+
+function sta(s)
+
+{
+  console.log("palindrome with normal function")
+  if(s==s.split('').reverse().join(''))
+  {
+    console.log(s+" is a palindorme");
+  }
+  else
+  {
+    console.log(s+" is not a palindrome");
+  }
+  console.log("------------------------------");
+}
+sta("pen");
+
+
+
+var clg=(s)=>
+{
+  let r='';
+  for(let i=s.length-1;i>=0;i--)
+  {
+    r=r+s[i];
+  }
+  return r;
+}
+console.log("Reverse the string using arrow funtion");
+console.log(clg("reverse"));
+console.log("-----------------------------------");
+  
+  
+function rev(a)
+{
+  return a.split('').reverse().join('');
+}
+console.log("reverse the string using function")
+console.log(rev("rickshi"));
+console.log("-------------------------------")
+
+
+function reve(s)
+{
+  let rever='';
+  for(let i=s.length-1;i>=0;i--)
+  {
+    rever=rever+s[i];
+  }
+  return rever;
+}
+console.log("Reverse string using for loop");
+console.log(reve("rickshi"));
+console.log("-----------------------------------");
+
+
+function oddeven(n)
+{
+  if( n%2==0)
+  {
+    return n+" is even";
+  }
+  else
+  {
+    return n+" is odd";
+  }
+}
+console.log("Even or odd");
+console.log(oddeven(9));
+console.log(oddeven(8));
+console.log("----------------------------------");
+
+
+function fact(n)
+{
+  if (n==0)
+  {
+    return 1;
+  }
+  return n*fact(n-1);
+}
+
+let no=5;
+
+console.log("factorial");
+console.log("Factorial of "+no+" is : "+fact(no));
+console.log("-----------------------------------");
+
+
+function revno(n)
+{
+  console.log(" numbers in reverse order");
+  for(let i=n;i>=1;i--)
+  {
+    console.log(i);
+  }
+  console.log("------------------------------");
+}
+revno(10);
+
+function srt(c)
+{
+  return c*c;
+}
+console.log("Sqaurt using function");
+let c=6;
+console.log("The sqaure root of "+c+" is : "+srt(c));
+console.log("---------------------------------");
+
+
+function posorneg(n)
+{
+  if (n>0)
+  {
+    return n +" is a positive";
+  }
+  else if(n==0)
+  {
+    return n +" is a netural";
+  }
+  else
+  {
+    return n+" is a negative";
+  }
+}
+let n=10;
+let n1=-9;
+let n3=0;
+console.log("find positive or negative");
+console.log(posorneg(n));
+console.log(posorneg(n1));
+console.log(posorneg(n3));
+console.log("---------------------------------");
+
+
+function max(a,b)
+{
+  return a > b ? a : b;
+}
+console.log("Find Maximum Number");
+console.log("The maximum is :"+max(10,20));
+console.log("---------------------------------");
+
+
+function isprime(n)
+{
+  if(n <= 1)
+  {
+    return n+ "is Not prime";
+  }
+  for(let i=2;i<n;i++)
+  {
+    if(n%i==0)
+    {
+      return n+ " is Not prime ";
+    }
+    
+  }
+  return n+" is prime";
+}
+console.log("Find prime Numbers");
+console.log(isprime(5));
+console.log(isprime(15));
+console.log("---------------------------------");
+
+
+function fibo(n)
+{
+  let a=0,b=1;
+  
+  for(let i=1;i<=n;i++)
+  {
+    console.log(a);
+    let next=a+b;
+    a=b;
+    b=next;
+  }
+
+}
+let num1=7;
+console.log("Fibonacci Series of " +num1 +" is : ");
+fibo(num1);
+console.log("------------------------------");
+
+function vowel(s)
+{
+  let count=0;
+  let vowels='aeiouAEIOU';
+  
+  for(let ch of s)
+  {
+    if( vowels.includes(ch))
+    {
+      count++;
+    }
+    
+  }
+  return count;
+}
+console.log("Find vowels counts");
+var s="javascript";
+console.log("Number of vowels in "+s+" is "+vowel(s));
+console.log("--------------------------");
+
+
+function maxarr(arr)
+{
+  max1=arr[0];
+  
+  for(let i=1;i<arr.length;i++)
+  {
+    if(arr[i]> max1)
+    {
+      max1=arr[i];
+    }
+  }
+  return max1;
+}
+let arr=[2,10,8,11,45,3];
+console.log("Find Maximum in the array ");
+console.log("The maximum number in the array  ["+arr+"] is "+maxarr(arr));
+console.log("------------------------------------");
+
+
+function sumarr(arr1)
+{
+  let sum=0;
+  
+  for(let i=0;i<arr1.length;i++)
+  {
+    sum+=arr1[i];
+  }
+  return sum;
+}
+
+let arr1=[2,3,4,5,6];
+console.log("sum  of the array");
+console.log("The sum of the array ["+arr1+"] is : "+sumarr(arr1));
+console.log("------------------------------------");
+
+
+function wordcount(t)
+{
+  return t.trim().split(" ").length;
+}
+let word1="Chengalpattu district";
+console.log("Number of words");
+console.log("Number of words in word "+word1+" is : "+wordcount(word1));
+console.log("---------------------------");
+
+
+function swap(a,b)
+{
+  console.log("Before Swap : ",a,b);
+  
+  let temp=a;
+  a=b;
+  b=temp;
+  
+  console.log("After Swap : ",a,b );
+}
+let a="program";
+let b="python";
+console.log("Swaping");
+swap(a,b);
+console.log("---------------------------");
+
+function toUpper(str) {
+  return str.toUpperCase();
+}
+let str="rickshitha";
+console.log("To Upper Case letter");
+console.log("The given String "+str+" is "+toUpper(str));
+console.log("--------------------------------");
+
+function calculator(r, s1, op) {
+  if (op == "+") return r + s1;
+  if (op == "-") return r - s1;
+  if (op == "*") return r * s1;
+  if (op == "/") return r / s1;
+
+  return "Invalid operator";
+}
+let r=20;
+let s1=30;
+
+console.log("Simple Calculator");
+console.log("The Given Number "+r +" and "+s1+" is "+ calculator(r,s1, "+"));
+console.log("The Given Number "+r +" and "+s1+" is "+ calculator(r,s1, "*"));
